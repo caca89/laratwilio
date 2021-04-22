@@ -1,0 +1,30 @@
+{
+    "name": "Super/LaraTwilio",
+    "description": "kirim sms dan wa",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Irsyad Syahruddin",
+            "email": "irsyads2689@gmail.com"
+        }
+    ],
+    "require": {
+        "twilio/sdk": "^6.22"
+    },
+    "autoload": {
+        "psr-4": {
+            "Caca89\\LaraTwilio\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Caca89\\LaraTwilio\\LaraTwilioServiceProvider"
+            ],
+            "aliases": {
+                "LaraTwilio": "Caca89\\LaraTwilio\\Facades\\LaraTwilio"
+            }
+        }
+    }
+}
