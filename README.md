@@ -6,8 +6,9 @@ Require the package via composer into your project
 ```shell
 composer require caca89/laratwilio
 ```
-### Configurations
-Add file `laratwilio.php` at folder config, and type it as below
+
+## Configurations
+Add file `laratwilio.php` in folder config, and type it as below
 ```php
 <?php
 
@@ -27,8 +28,16 @@ TWILIO_MESSAGE_SERVICE_SID=
 TWILIO_SMS_FROM=
 TWILIO_WA_FROM=
 ```
+add a Facade for more convenient usage. In boostrap/app.php add the following line to the aliases array:
+```
+$app->configure('laratwilio');
+class_alias('Caca89\LaraTwilio\Facades\LaraTwilio', 'LaraTwilio');
 
-### Usage
+$app->register(Caca89\LaraTwilio\LaraTwilioServiceProvider::class);
+
+```
+
+## Usage
 To send a SMS message, you can use the notifySms()
 ```php
 <?php
@@ -43,9 +52,9 @@ To send a WA message, you can use the notifyWa()
 <?php
 use Caca89\LaraTwilio\Facades\LaraTwilio;
 
-$sendSms = LaraTwilio::notifyWa('Hello', '+62801234567890', )
+$sendWa = LaraTwilio::notifyWa('Hello', '+62801234567890', )
 
-return $sendSms;
+return $sendWa;
 ```
 
 ## Disclaimer
