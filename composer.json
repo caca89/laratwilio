@@ -1,5 +1,5 @@
 {
-    "name": "Super/LaraTwilio",
+    "name": "super/laratwilio",
     "description": "kirim sms dan wa",
     "type": "library",
     "license": "MIT",
