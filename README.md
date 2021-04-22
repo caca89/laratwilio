@@ -43,7 +43,7 @@ To send a WA message, you can use the notifyWa()
 <?php
 use Caca89\LaraTwilio\Facades\LaraTwilio;
 
-$sendSms = LaraTwilio::notifySWa('Hello', '+62801234567890', )
+$sendSms = LaraTwilio::notifyWa('Hello', '+62801234567890', )
 
 return $sendSms;
 ```
